@@ -12,6 +12,7 @@ export const Cast = () => {
         actorMovies(id).then(response => {
             setCatsArry(response.data.cast)
         })
+         // eslint-disable-next-line
     },[])
     try{
     return(

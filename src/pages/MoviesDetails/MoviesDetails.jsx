@@ -8,7 +8,6 @@ export const MoviesDetails = () => {
   const { id } = useParams();
   const location = useLocation()
   const backPath = location.state?.from || '/';
-  console.log(backPath)
   const [moviesDetails, setMoviesDetails] = useState([]);
   const abautMovies = async id => {
     const response = await fetchAbautMovies(id);

@@ -12,6 +12,7 @@ export const Reviews = () => {
     reviewsMovies(id).then(response => {
       setReviewsArry(response.data.results);
     });
+     // eslint-disable-next-line
   }, []);
   return (
     <>

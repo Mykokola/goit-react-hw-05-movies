@@ -24,6 +24,7 @@ export const Movies = () => {
     searchMovies(searchForm).then(response => {
       setSearchMoviesArry(response.data.results);
     });
+      // eslint-disable-next-line
   }, [searchParams]);
 
   return (

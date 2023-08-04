@@ -3,8 +3,12 @@ import { fetchAbautMovies } from 'apiMovies/fetchMovies';
 import { useState, useEffect } from 'react';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+
 export const MoviesDetails = () => {
   const { id } = useParams();
+  const location = useLocation()
+  const backPath = location.state?.from || '/';
+  console.log(backPath)
   const [moviesDetails, setMoviesDetails] = useState([]);
   const abautMovies = async id => {
     const response = await fetchAbautMovies(id);
@@ -22,6 +26,7 @@ export const MoviesDetails = () => {
 
     return (
       <>
+        <Link to={backPath}>back</Link>
         <div>
           <img src={`https://image.tmdb.org/t/p/w300${poster_path}`} alt="" />
           <h1>
@@ -37,8 +42,8 @@ export const MoviesDetails = () => {
         </div>
         <div>
           <h3>addition information</h3>
-          <NavLink to={'cast'}>Cast</NavLink>
-          <NavLink to={'reviews'}>Reviews</NavLink>
+          <NavLink to={'cast'} state={location.state}>Cast</NavLink>
+          <NavLink to={'reviews'} state={location.state}>Reviews</NavLink>
           <Suspense fallback={<div>Loading subpage...</div>}>
             <Outlet />
           </Suspense>

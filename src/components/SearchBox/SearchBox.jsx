@@ -1,4 +1,4 @@
-export const SearchBox = () => {
+export const SearchBox = ({submitSearch,handSetState,searchForm}) => {
   return (
     <>
       <form onSubmit={submitSearch}>

@@ -1,4 +1,4 @@
-import { NavLink,useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { NavSearch } from './MoviesList.styled';
 import { SearchMoviesNavLink } from './MoviesList.styled';
 export const MoviesList = ({MoviesArry}) => {

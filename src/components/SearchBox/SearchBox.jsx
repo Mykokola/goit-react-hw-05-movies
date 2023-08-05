@@ -1,3 +1,4 @@
+import { PropTypes  } from "react";
 export const SearchBox = (submitSearch,handSetState,searchForm) => {
   return (
     <>
@@ -8,3 +9,8 @@ export const SearchBox = (submitSearch,handSetState,searchForm) => {
     </>
   );
 };
+SearchBox.PropTypes = {
+  submitSearch: PropTypes.func.isRequired,
+  handSetState: PropTypes.func.isRequired,
+  searchForm: PropTypes.string.isRequired
+}

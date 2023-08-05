@@ -1,5 +1,5 @@
 import { PropTypes  } from "react";
-export const SearchBox = ({submitSearch,handSetState,searchForm}) => {
+export const SearchBox = ({submitSearch=1,handSetState=1,searchForm=1}) => {
   return (
     <>
       <form onSubmit={submitSearch}>

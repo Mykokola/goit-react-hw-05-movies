@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { NavSearch } from './MoviesList.styled';
 import { SearchMoviesNavLink } from './MoviesList.styled';
-import { PropTypes  } from "react";
 export const MoviesList = ({MoviesArry}) => {
   const location = useLocation()
     if(MoviesArry){
